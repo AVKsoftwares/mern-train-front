@@ -1,0 +1,29 @@
+.cards-container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.exercice-container {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.exercice-title {
+	font-size: 1.5rem;
+}
+
+.exercice-description {
+	font-size: 1rem;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}

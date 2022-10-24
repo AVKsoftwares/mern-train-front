@@ -1,0 +1,24 @@
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.navbar ul li {
+	text-decoration: none;
+	display: inline;
+	margin: 1em;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+.navbar ul li a:hover {
+	text-decoration: none;
+	color: grey;
+}
