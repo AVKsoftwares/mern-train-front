@@ -1,10 +1,9 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function ExerciceForm() {
     const navigate = useNavigate();
-
 
     const [form, setForm] = useState({
         name: '',
@@ -12,6 +11,15 @@ function ExerciceForm() {
         tags: []
     });
 
+    const [tags, setTags] = useState([])
+    const getTags = async () => {
+        const res = await axios.get('http://localhost:3001/tags')
+        setTags(res.data)
+    }
+
+    useEffect(() => {
+        getTags()
+    }, [])
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -23,6 +31,26 @@ function ExerciceForm() {
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    function addTag(tag) {
+        var updatedTags = form.tags;
+        updatedTags.push(tag);
+        setForm({
+            ...form,
+            tags: updatedTags
+        });
+    }
+
+    function removeTag(tag) {
+        var updatedTags = form.tags;
+        updatedTags.splice(updatedTags.map(x => {
+            return x._id;
+        }).indexOf(tag._id), 1);
+        setForm({
+            ...form,
+            tags: updatedTags
+        });
     }
 
     return (
@@ -48,6 +76,20 @@ function ExerciceForm() {
                             description: e.target.value
                         });
                     }}></textarea>
+                </div>
+
+
+                <div className="form-tags-container">
+                    {tags.map((tag) => (
+                        <div>
+                            <input onChange={(e: any) => {
+                                e.target.checked
+                                    ? addTag(tag)
+                                    : removeTag(tag)
+                            }} className="card-tag" type="checkbox" name="tags" id={tag.name} />
+                            <label htmlFor={tag.name}>{tag.name}</label>
+                        </div>
+                    ))}
                 </div>
 
                 <div>

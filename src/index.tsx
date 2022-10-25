@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './css/exercices.css'
 import "./css/card.css"
+import "./css/tags.css"
 import "./css/navbar.css"
 
 

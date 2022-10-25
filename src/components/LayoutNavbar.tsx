@@ -14,6 +14,9 @@ function LayoutNavbar() {
           <li>
             <Link to="/addExercice">Ajouter un Exercice</Link>
           </li>
+          <li>
+            <Link to="/tags">Tags</Link>
+          </li>
         </ul>
       </nav>
       <hr />

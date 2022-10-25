@@ -10,6 +10,8 @@ import Exercices from './pages/exercices';
 import AddExercice from './pages/add-exercice';
 import UpdateExercice from './pages/update-exercice';
 
+import Tags from './pages/tags';
+
 import PageNotFound from './pages/page-not-found';
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
           <Route path="/exercice/:id" element={<Exercice />} />
           <Route path="/addExercice" element={<AddExercice />} />
           <Route path="/updateExercice/:id" element={<UpdateExercice />} />
+          <Route path="/tags" element={<Tags />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

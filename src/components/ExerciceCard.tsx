@@ -8,7 +8,6 @@ function ExerciceCard({ exercice }) {
 	function handleClick() {
 		axios.get(`http://localhost:3001/exercices/delete/${exercice._id}`)
 			.then(function (response) {
-				console.log(response);
 				navigate(0);
 			})
 			.catch(function (error) {
@@ -22,6 +21,11 @@ function ExerciceCard({ exercice }) {
 			<div className="card-body">
 				<p className="card-title"><b>{exercice.name}</b></p>
 				<p className="card-description">{exercice.description}</p>
+				<div className="card-tags">
+					{exercice.tags.map((tag) => (
+						<p key={tag._id} className="card-tag">{tag.name}</p>
+					))}
+				</div>
 			</div>
 
 			<div className="card-buttons">

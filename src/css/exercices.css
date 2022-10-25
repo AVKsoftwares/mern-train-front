@@ -27,3 +27,13 @@
 	align-items: center;
 	margin-top: 30px;
 }
+
+.form-tags-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
