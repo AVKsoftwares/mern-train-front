@@ -13,17 +13,18 @@ body {
 	/* background-color: #4d4d4d; */
 	background-color: #7cb9e8;
 	position: relative;
+	box-shadow: 4px 3px 8px 1px #969696;
+	-webkit-box-shadow: 4px 3px 8px 1px #969696;
+	margin-bottom: 20px;
 }
 
 .nav > .nav-header {
 	display: inline;
 }
 
-.nav > .nav-header > .nav-title {
-	display: inline-block;
-	font-size: 22px;
-	color: #fff;
-	padding: 10px 10px 10px 10px;
+.nav > .nav-header > .nav-logo {
+	width: auto;
+	max-height: 100%;
 }
 
 .nav > .nav-btn {

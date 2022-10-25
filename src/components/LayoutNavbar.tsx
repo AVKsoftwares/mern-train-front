@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Outlet, Link } from "react-router-dom";
 
+import TransparentLogo from '../images/logo-transparent.png'
 
 function LayoutNavbar() {
 
@@ -9,9 +10,7 @@ function LayoutNavbar() {
       <div className="nav">
         <input type="checkbox" id="nav-check" />
         <div className="nav-header">
-          <div className="nav-title">
-            Logo
-          </div>
+          <img className="nav-logo" src={TransparentLogo} alt="Logo" />
         </div>
         <div className="nav-btn">
           <label htmlFor="nav-check">
@@ -36,22 +35,3 @@ function LayoutNavbar() {
 }
 
 export default LayoutNavbar;
-
-
-{/* <div>
-      <nav className="navbar">
-        <ul>
-          <li>
-            <Link to="/">Exercices</Link>
-          </li>
-          <li>
-            <Link to="/addExercice">Ajouter un Exercice</Link>
-          </li>
-          <li>
-            <Link to="/tags">Tags</Link>
-          </li>
-        </ul>
-      </nav>
-      <hr />
-      <Outlet />
-    </div> */}

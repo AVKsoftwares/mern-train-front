@@ -1,8 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import './css/App.css';
-
 import LayoutNavbar from './components/LayoutNavbar';
 
 import Exercice from './pages/exercice';

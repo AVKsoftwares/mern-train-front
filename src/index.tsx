@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import './css/exercices.css'
+import "./css/exercices.css"
 import "./css/card.css"
 import "./css/tags.css"
+import "./css/buttons.css"
 import "./css/navbar.css"
 
 
